@@ -2,11 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const PharmaSchema = new Schema({
+    compnayName: {
+       type:String,
+       required:true
+    },
     serialNo: {
         type: String,
         required: true
     },
-    medName: {
+    medicineName: {
         type: String,
         required: true
     },
@@ -21,7 +25,11 @@ const PharmaSchema = new Schema({
     },
     status: {
         type: Boolean,
-        required: true
+        default:false
+    },
+    statusChecked:{
+        type:Date,
+        
     }
 
 })
